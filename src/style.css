@@ -2,6 +2,7 @@
 @import "./base/reset.css";
 
 @import "./utilities/font.css";
+@import "./utilities/button.css";
 
 @import "./components/header.css";
 @import "./components/main.css";
