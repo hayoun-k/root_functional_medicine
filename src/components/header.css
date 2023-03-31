@@ -1,0 +1,22 @@
+header {
+  padding: 11.5px 16px;
+  border-bottom: 1px solid rgb(196, 195, 187);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#logo {
+  max-width: 100px;
+}
+
+.navbar-right {
+  display: flex;
+}
+
+.header-icon {
+  height: 20px;
+}
