@@ -3,6 +3,7 @@
 @import 'utilities/font.css';
 @import 'base/base.css';
 /* @import 'utilities/button.css'; */
+@import 'utilities/accordion.css';
 
 @import 'components/header.css';
 @import 'components/main.css';

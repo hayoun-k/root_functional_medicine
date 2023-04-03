@@ -99,16 +99,6 @@ main {
   position: relative;
 }
 
-.feature-item::after {
-  content: '';
-  width: 16px;
-  height: 16px;
-  background-image: url(icons/chevron-down.svg);
-  position: absolute;
-  right: 0;
-  top: 18px;
-}
-
 .feature-item img {
   grid-area: a;
 }

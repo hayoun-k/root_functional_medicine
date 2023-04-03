@@ -16,9 +16,20 @@
       <div class="navbar-right">
         <a href="#" class="search"><img src="./src/icons/search.svg" alt="" class="header-icon"></a>
         <a href="#" class="cart"><img src="./src/icons/cart.svg" alt="" class="header-icon"></a>
-        <div class="menu-button hamburger"></div>
+        <ul class="nav-menu">
+          <li>store</li>
+          <li>membership</li>
+          <li>articles</li>
+          <li>about us</li>
+        </ul>
+        <div class="menu-button hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
       </div>
     </nav>
+    <script src="./src/js/menu.js"></script>
   </header>
   <main>
     <section class="hero">
@@ -76,26 +87,30 @@
       <p class="description">The only functional medicine membership that includes everything you need.</p>
       <div class="features">
         <h4>What's Included</h4>
-        <ul class="feature-detail">
-          <li class="feature-item">
+        <ul class="feature-detail" id="accordion">
+          <li class="feature-item accordion">
             <img src="./src/icons/checkmark.svg" alt="">
-            <h5>Doctor & Dietitian Sessions</h5>
-            <p>Over the course of the year,  have unlimited functional medicine visits with your Root MD/DO & 6 virtual sessions with your dietitian. Our sessions last up to one hour each.</p>
+            <h5><label for="one">Doctor & Dietitian Sessions</label></h5>
+            <input type="radio" name="accordion" id="one">
+            <p class="content">Over the course of the year,  have unlimited functional medicine visits with your Root MD/DO & 6 virtual sessions with your dietitian. Our sessions last up to one hour each.</p>
           </li>
-          <li class="feature-item">
+          <li class="feature-item accordion">
             <img src="./src/icons/checkmark.svg" alt="">
-            <h5>Lab Testing</h5>
-            <p>At your first doctor’s session we’ll order our proprietary Root wellness lab testing panel (included in the cost of membership). You’ll also have access to advanced testing and transparent, direct pricing that saves our members up to 90% from conventional prices.</p>
+            <h5><label for="two">Lab Testing</label></h5>
+            <input type="radio" name="accordion" id="two">
+            <p class="content">At your first doctor’s session we’ll order our proprietary Root wellness lab testing panel (included in the cost of membership). You’ll also have access to advanced testing and transparent, direct pricing that saves our members up to 90% from conventional prices.</p>
           </li>
-          <li class="feature-item">
+          <li class="feature-item accordion">
             <img src="./src/icons/checkmark.svg" alt="">
-            <h5>Personalized Wellness Plan</h5>
-            <p>Including information about your root causes, third-party tested supplement recommendations, nutrition recommendations, tips for stress and sleep, and realistic and achievable goal setting.</p>
+            <h5><label for="three">Personalized Wellness Plan</label></h5>
+            <input type="radio" name="accordion" id="three">
+            <p class="content">Including information about your root causes, third-party tested supplement recommendations, nutrition recommendations, tips for stress and sleep, and realistic and achievable goal setting.</p>
           </li>
-          <li class="feature-item">
+          <li class="feature-item accordion">
             <img src="./src/icons/checkmark.svg" alt="">
-            <h5>Support</h5>
-            <p>Educational Courses, Digital Meal Plans and Recipes & Access to our Online Community.</p>
+            <h5><label for="four">Support</label></h5>
+            <input type="radio" name="accordion" id="four">
+            <p class="content">Educational Courses, Digital Meal Plans and Recipes & Access to our Online Community.</p>
           </li>
         </ul>
       </div>
@@ -311,25 +326,30 @@
     </section>
     <section class="faq">
       <h2>General FAQ</h2>
-      <div class="faq-item-container">
+      <div class="faq-item-container accordion">
         <div class="faq-item">
-          <h3>Why is there a sign up fee?</h3>
+          <h3><label for="faq1">Why is there a sign up fee?</label></h3>
+          <input type="radio" name="accordion" id="faq1">
           <p>Our sign up fee helps cover the upfront detective work of our doctor and dietitian team in digging into your Root causes, your lengthy intake session and process, and the immediate access of our platform including access to our educational courses & digital meal plans developed and tested in house by a team of doctors, dietitians, and chefs.</p>
         </div>
         <div class="faq-item">
-          <h3>Do you accept insurance?</h3>
+          <h3><label for="faq2">Do you accept insurance?</label></h3>
+          <input type="radio" name="accordion" id="faq2">
           <p></p>
         </div>
         <div class="faq-item">
-          <h3>I'm out of state. Can I work with your doctors?</h3>
+          <h3><label for="faq3">I'm out of state. Can I work with your doctors?</label></h3>
+          <input type="radio" name="accordion" id="faq3">
           <p></p>
         </div>
         <div class="faq-item">
-          <h3>Can I just do one visit with a Root doctor?</h3>
+          <h3><label for="faq4">Can I just do one visit with a Root doctor?</label></h3>
+          <input type="radio" name="accordion" id="faq4">
           <p></p>
         </div>
         <div class="faq-item">
-          <h3>Why do you include dietitian visits in your membership?</h3>
+          <h3><label for="faq5">Why do you include dietitian visits in your membership?</label></h3>
+          <input type="radio" name="accordion" id="faq5">
           <p></p>
         </div>
       </div>
