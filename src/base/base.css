@@ -8,6 +8,10 @@
   --clr-seafoam-secondary:rgba(236, 240, 235, 1);
 }
 
+body {
+  position: relative;
+}
+
 li {
   list-style-type: none;
 }
@@ -34,4 +38,18 @@ li {
 .btn-outline-green {
   color: var(--clr-primary);
   background-color: transparent;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  z-index: 0;
+  width: 100%;
+  /* left: -1.5rem; */
+}
+
+@media screen and (min-width:800px) {
+  div.mobile-only {
+    display: none;
+  }
 }

@@ -1,0 +1,64 @@
+
+.slider-container .button-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.chevron-left,
+.chevron-right {
+  padding: 14px;
+  border-radius: 100vw;
+  background-color: white;
+}
+
+.indicator-container {
+  margin-bottom: 16px;
+  /* margin-inline: auto; */
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: nowrap;
+}
+
+.carousel_indicator {
+  width: 60px;
+  height: 6px;
+  background-color: var(--clr-lightgreen);
+  border: none;
+  border-radius: 8px;
+}
+
+.carousel_indicator.current_slide {
+  background-color: var(--clr-primary);
+}
+
+.is-done {
+  opacity: 0.4;
+}
+
+.carousel_track-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel_track {
+
+  position: relative;
+  /* overflow-x: hidden; */
+  /* overflow-y: hidden; */
+  transition: transform 250ms ease-in;
+}
+
+.case .carousel_track {
+  min-height: 900px;
+}
+
+.review .carousel_track {
+  min-height: 350px;
+}
+
+.card-content {
+  width: 100%;
+  position: absolute;
+  top: 0;
+}

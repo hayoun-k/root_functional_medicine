@@ -5,11 +5,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./src/style.css">
+  <script src="./src/js/carousel.js" defer></script>
+  <script defer src="./src/js/menu.js"></script>
   <title>Document</title>
 </head>
 <body>
   <header>
-    <nav>
+    <nav class="navigation">
       <div class="logo navbar-left">
         <img src="./src/images/logo.svg" alt="Root logo" id="logo">
       </div>
@@ -17,35 +19,42 @@
         <a href="#" class="search"><img src="./src/icons/search.svg" alt="" class="header-icon"></a>
         <a href="#" class="cart"><img src="./src/icons/cart.svg" alt="" class="header-icon"></a>
         <ul class="nav-menu">
-          <li>store</li>
-          <li>membership</li>
-          <li>articles</li>
-          <li>about us</li>
+          <li><a href="">store</a></li>
+          <li><a href="">membership</a></li>
+          <li><a href="">articles</a></li>
+          <li><a href="">about us</a></li>
         </ul>
-        <div class="menu-button hamburger">
+        <div class="menu-button hamburger mobile-only">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
+        </div>
+        <div class="login">
+          <button class="btn btn-primary-green">Login</button>
         </div>
       </div>
     </nav>
-    <script src="./src/js/menu.js"></script>
+
   </header>
   <main>
-    <section class="hero">
-      <div class="hero-txt">
-        <h2 class="subheading">Join the Club</h2>
-        <div class="wrapper">
-          <h1>Membership</h1>
+    <div class="hero-container">
+      <section class="hero">
+        <div class="hero-txt">
+          <h2 class="subheading">Join the Club</h2>
+          <div class="wrapper">
+            <h1>Membership</h1>
+          </div>
+          <h3 class="description">Work with our world class doctors and dietitians online in the most comprehensive functional medicine membership ever.</h3>
+          <p>Due to our small personalized practice size, spots may be limited. We are currently accepting new members.</p>
         </div>
-        <h3 class="description">Work with our world class doctors and dietitians online in the most comprehensive functional medicine membership ever.</h3>
-        <p>Due to our small personalized practice size, spots may be limited. We are currently accepting new members.</p>
-      </div>
-      <div class="hero-button">
-        <button href="#" class="btn btn-outline-green">Learn How It Works</button>
-        <button href="#" class="btn btn-primary-green">Become A Member</button>
-      </div>
-    </section>
+        <div class="hero-button">
+          <button href="#" class="btn btn-outline-green">Learn How It Works</button>
+          <button href="#" class="btn btn-primary-green">Become A Member</button>
+        </div>
+        
+      </section>
+      <!-- <img src="./src/images/Repeating Wave 1.svg" alt="" class="wave"> -->
+    </div>
     <section class="treatment">
       <h2>Treatment Areas</h2>
       <p class="description">We treat all these issues at the root cause.</p>
@@ -91,25 +100,25 @@
           <li class="feature-item accordion">
             <img src="./src/icons/checkmark.svg" alt="">
             <h5><label for="one">Doctor & Dietitian Sessions</label></h5>
-            <input type="radio" name="accordion" id="one">
+            <input type="checkbox" name="accordion" id="one">
             <p class="content">Over the course of the year,  have unlimited functional medicine visits with your Root MD/DO & 6 virtual sessions with your dietitian. Our sessions last up to one hour each.</p>
           </li>
           <li class="feature-item accordion">
             <img src="./src/icons/checkmark.svg" alt="">
             <h5><label for="two">Lab Testing</label></h5>
-            <input type="radio" name="accordion" id="two">
+            <input type="checkbox" name="accordion" id="two">
             <p class="content">At your first doctor’s session we’ll order our proprietary Root wellness lab testing panel (included in the cost of membership). You’ll also have access to advanced testing and transparent, direct pricing that saves our members up to 90% from conventional prices.</p>
           </li>
           <li class="feature-item accordion">
             <img src="./src/icons/checkmark.svg" alt="">
             <h5><label for="three">Personalized Wellness Plan</label></h5>
-            <input type="radio" name="accordion" id="three">
+            <input type="checkbox" name="accordion" id="three">
             <p class="content">Including information about your root causes, third-party tested supplement recommendations, nutrition recommendations, tips for stress and sleep, and realistic and achievable goal setting.</p>
           </li>
           <li class="feature-item accordion">
             <img src="./src/icons/checkmark.svg" alt="">
             <h5><label for="four">Support</label></h5>
-            <input type="radio" name="accordion" id="four">
+            <input type="checkbox" name="accordion" id="four">
             <p class="content">Educational Courses, Digital Meal Plans and Recipes & Access to our Online Community.</p>
           </li>
         </ul>
@@ -192,45 +201,151 @@
     <section class="case">
       <h3 class="subheading">Stories Behind the Healing</h3>
       <h2>Case Studies</h2>
-      <div class="carousel-control mobile-only"></div>
-      <div class="case-item">
-        <div class="image-container">
-          <img src="./src/images/brynn.png" alt="">
-          <p class="caption">Brynn represents a potential outcome that a typical Gut Health member might experience with Root.</p>
-        </div>
-        <div class="text">
-          <h4>Gut Health Potential Outcomes</h4>
-          <p class="member">Brynn - 28</p>
-          <h5>Her Symptoms:</h5>
-          <div class="tag-container">
-            <span class="tag">Bloating</span>
-            <span class="tag">Diarrhea</span>
-            <span class="tag">Fatigue</span>
+      <div class="carousel-control mobile-only">
+        <div class="slider-container">
+          <div class="button-container">
+            <img src="./src/icons/chevron_left.svg" alt="" class="chevron-left is-done">
+            <span></span>
+            <img src="./src/icons/chevron_right.svg" alt="" class="chevron-right">
           </div>
-          <h5>Her Outcomes:</h5>
-          <p>Brynn identified the root cause of her bloating and diarrhea thanks to the comprehensive microbiome testing in the Root membership. She worked with the doctors and dietitians to create a realistic diet, supplement (to correct nutrient deficiencies and gut imbalances), and lifestyle plan and “finally feels like herself again”.</p>
+        </div>
+        <div class="indicator-container">
+          <button class="carousel_indicator current_slide"></button>
+          <button class="carousel_indicator"></button>
+          <button class="carousel_indicator"></button>
+        </div>
+      </div>
+      <div class="carousel_track-container">
+        <div class="slider-container carousel_track">
+          <div class="case-item card-content current_slide">
+            <div class="image-container">
+              <img src="./src/images/brynn.png" alt="">
+              <p class="caption">Brynn represents a potential outcome that a typical Gut Health member might experience with Root.</p>
+            </div>
+            <div class="text">
+              <h4>Gut Health Potential Outcomes</h4>
+              <p class="member">Brynn - 28</p>
+              <h5>Her Symptoms:</h5>
+              <div class="tag-container">
+                <span class="tag">Bloating</span>
+                <span class="tag">Diarrhea</span>
+                <span class="tag">Fatigue</span>
+              </div>
+              <h5>Her Outcomes:</h5>
+              <p>Brynn identified the root cause of her bloating and diarrhea thanks to the comprehensive microbiome testing in the Root membership. She worked with the doctors and dietitians to create a realistic diet, supplement (to correct nutrient deficiencies and gut imbalances), and lifestyle plan and “finally feels like herself again”.</p>
+            </div>
+          </div>
+          <div class="case-item card-content">
+            <div class="image-container">
+              <img src="./src/images/gabriella.png" alt="">
+              <p class="caption">Grace represents a potential outcome that a typical PCOS member might experience with Root.</p>
+            </div>
+            <div class="text">
+              <h4>PCOS/Thyroid (Hashimoto’s) Potential Outcomes</h4>
+              <p class="member">Gabriella — 41</p>
+              <h5>Her Symptoms:</h5>
+              <div class="tag-container">
+                <span class="tag">Bloating</span>
+                <span class="tag">Diarrhea</span>
+                <span class="tag">Fatigue</span>
+                <span class="tag">General Overwhelm</span>
+                <span class="tag">Anxiety</span>
+                <span class="tag">Brain Fog</span>
+              </div>
+              <h5>Her Outcomes:</h5>
+              <p>Grace identified root causes of her PCOS & Hashimoto’s with the Root team: stress, nutrient deficiencies, elevated insulin, and poor gut health. After just a few short months of the Root lifestyle, “feels like a totally new (and much calmer) person who can finally enjoy her kids again” and is thankful for the continued suppo rt and accountability offered by the Root membership.</p>
+            </div>
+          </div>
+          <div class="case-item card-content">
+            <div class="image-container">
+              <img src="./src/images/ashna.png" alt="">
+              <p class="caption">Ashna represents a potential outcome that a typical Autoimmune Disease member might experience with Root.</p>
+            </div>
+            <div class="text">
+              <h4>Autoimmune Disease</h4>
+              <p class="member">Ashna — 34</p>
+              <h5>Her Symptoms:</h5>
+              <div class="tag-container">
+                <span class="tag">Joint Pain & Swelling</span>
+                <span class="tag">Fatigue</span>
+                <span class="tag">Brain Fog</span>
+              </div>
+              <h5>Her Outcomes:</h5>
+              <p>BAshna completed a personalized anti-inflammatory protocol with the Root team, guided by the included custom blood panel, microbiome testing, and knowledge of the expert functional medicine team at Root. By identifying food sensitivities and optimizing gut health, she was able to reduce her system wide inflammation score (ROOT SCORE?) by over 70% and said “I didn’t realize it was possible to feel this good”.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
     <section class="review">
       <h3 class="subheading">What The Community is Saying</h3>
       <h2>Member Reviews</h2>
-      <div class="carousel-control mobile-only"></div>
-      <div class="review-item">
-        <div class="rating">
-          <div class="star-container">
-            <img src="./src/icons/star_rate.svg" alt="" class="stars">
-            <img src="./src/icons/star_rate.svg" alt="" class="stars">
-            <img src="./src/icons/star_rate.svg" alt="" class="stars">
-            <img src="./src/icons/star_rate.svg" alt="" class="stars">
-            <img src="./src/icons/star_rate.svg" alt="" class="stars">
+      <div class="carousel-control mobile-only">
+        <div class="slider-container">
+          <div class="button-container">
+            <img src="./src/icons/chevron_left.svg" alt="" class="chevron-left is-done">
+            <span></span>
+            <img src="./src/icons/chevron_right.svg" alt="" class="chevron-right">
           </div>
-          <span class="rate">5 of 5</span>
         </div>
-        <div class="review-item-txt">
-          <p>“I really loved the idea of thinking about nutrition, stress reduction and exercise as part of a treatment plan. At my second visit, my migraines were down by more than half, which in and of itself was fantastic, but I was (and continue to be) feeling super energetic and optimistic about my health."</p>
+        <div class="indicator-container">
+          <button class="carousel_indicator current_slide"></button>
+          <button class="carousel_indicator"></button>
+          <button class="carousel_indicator"></button>
         </div>
-        <span class="initial">-J.X. J.X.</span>
+      </div>
+      <div class="carousel-control mobile-only"></div>
+      <div class="carousel_track-container">
+        <div class="review-item-container carousel_track">
+          <div class="review-item card-content current_slide">
+            <div class="rating">
+              <div class="star-container">
+                <img src="./src/icons/star_rate.svg" alt="" class="stars">
+                <img src="./src/icons/star_rate.svg" alt="" class="stars">
+                <img src="./src/icons/star_rate.svg" alt="" class="stars">
+                <img src="./src/icons/star_rate.svg" alt="" class="stars">
+                <img src="./src/icons/star_rate.svg" alt="" class="stars">
+              </div>
+              <span class="rate">5 of 5</span>
+            </div>
+            <div class="review-item-txt">
+              <p>“I really loved the idea of thinking about nutrition, stress reduction and exercise as part of a treatment plan. At my second visit, my migraines were down by more than half, which in and of itself was fantastic, but I was (and continue to be) feeling super energetic and optimistic about my health."</p>
+            </div>
+            <span class="initial">-J.X. J.X.</span>
+          </div>
+          <div class="review-item card-content">
+            <div class="rating">
+              <div class="star-container">
+                <img src="./src/icons/star_rate.svg" alt="" class="stars">
+                <img src="./src/icons/star_rate.svg" alt="" class="stars">
+                <img src="./src/icons/star_rate.svg" alt="" class="stars">
+                <img src="./src/icons/star_rate.svg" alt="" class="stars">
+                <img src="./src/icons/star_rate.svg" alt="" class="stars">
+              </div>
+              <span class="rate">5 of 5</span>
+            </div>
+            <div class="review-item-txt">
+              <p>"In late February I had blood work again. Two of the four blood results came back normal. I reintroduced eggs, corn and shellfish over a few weeks with no negative reactions. The diet changes were working and my gut was healing."</p>
+            </div>
+            <span class="initial">-J.X. C.F.</span>
+          </div>
+          <div class="review-item card-content">
+            <div class="rating">
+              <div class="star-container">
+                <img src="./src/icons/star_rate.svg" alt="" class="stars">
+                <img src="./src/icons/star_rate.svg" alt="" class="stars">
+                <img src="./src/icons/star_rate.svg" alt="" class="stars">
+                <img src="./src/icons/star_rate.svg" alt="" class="stars">
+                <img src="./src/icons/star_rate.svg" alt="" class="stars">
+              </div>
+              <span class="rate">5 of 5</span>
+            </div>
+            <div class="review-item-txt">
+              <p>"It was the best money I’ve ever spent, because nothing has ever given me so much in return as the feeling of abundant health. I’m forever grateful to Dr. Armstrong, Kelsey, and the team at Root!"</p>
+            </div>
+            <span class="initial">-J.X. A.T.</span>
+          </div>
+        </div>
       </div>
       <a href="#" class="google">Read More On Google</a>
     </section>
@@ -318,38 +433,43 @@
             <select name="state" id="state" required>
               <option value="">Select Your State</option>
               <option value="state">STATE</option>
+              <option value="state">STATE</option>
+              <option value="state">STATE</option>
+              <option value="state">STATE</option>
+              <option value="state">STATE</option>
+              <option value="state">STATE</option>
             </select>
             <button class="btn btn-primary-green" type="submit" id="notify-me">Notify Me</button>
           </div>
         </div>
       </div>
     </section>
-    <section class="faq">
+    <section class="faq" id="faq">
       <h2>General FAQ</h2>
-      <div class="faq-item-container accordion">
-        <div class="faq-item">
+      <div class="faq-item-container">
+        <div class="faq-item accordion">
           <h3><label for="faq1">Why is there a sign up fee?</label></h3>
-          <input type="radio" name="accordion" id="faq1">
-          <p>Our sign up fee helps cover the upfront detective work of our doctor and dietitian team in digging into your Root causes, your lengthy intake session and process, and the immediate access of our platform including access to our educational courses & digital meal plans developed and tested in house by a team of doctors, dietitians, and chefs.</p>
+          <input type="checkbox" name="accordion" id="faq1">
+          <p class="content">Our sign up fee helps cover the upfront detective work of our doctor and dietitian team in digging into your Root causes, your lengthy intake session and process, and the immediate access of our platform including access to our educational courses & digital meal plans developed and tested in house by a team of doctors, dietitians, and chefs.</p>
         </div>
-        <div class="faq-item">
+        <div class="faq-item accordion">
           <h3><label for="faq2">Do you accept insurance?</label></h3>
-          <input type="radio" name="accordion" id="faq2">
+          <input type="checkbox" name="accordion" id="faq2">
           <p></p>
         </div>
-        <div class="faq-item">
+        <div class="faq-item accordion">
           <h3><label for="faq3">I'm out of state. Can I work with your doctors?</label></h3>
-          <input type="radio" name="accordion" id="faq3">
+          <input type="checkbox" name="accordion" id="faq3">
           <p></p>
         </div>
-        <div class="faq-item">
+        <div class="faq-item accordion">
           <h3><label for="faq4">Can I just do one visit with a Root doctor?</label></h3>
-          <input type="radio" name="accordion" id="faq4">
+          <input type="checkbox" name="accordion" id="faq4">
           <p></p>
         </div>
-        <div class="faq-item">
+        <div class="faq-item accordion">
           <h3><label for="faq5">Why do you include dietitian visits in your membership?</label></h3>
-          <input type="radio" name="accordion" id="faq5">
+          <input type="checkbox" name="accordion" id="faq5">
           <p></p>
         </div>
       </div>
