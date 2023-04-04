@@ -53,3 +53,9 @@ li {
     display: none;
   }
 }
+
+@media screen and (max-width:799px) {
+  .desktop-only {
+    display: none;
+  }
+}
