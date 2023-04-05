@@ -62,3 +62,10 @@
   position: absolute;
   top: 0;
 }
+
+@media screen and (min-width:800px) {
+  .review .carousel_track-container {
+    width: 850px;
+    margin-inline: auto;
+  }
+}

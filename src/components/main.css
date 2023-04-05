@@ -1,3 +1,7 @@
+main {
+  background-color: var(--clr-cream);
+}
+
 main section {
   padding: 1.5rem;
   background-color: var(--clr-cream);
@@ -16,29 +20,20 @@ main section {
   position: relative;
 }
 
-.hero-container .wave {
-  object-fit: cover;
-  object-position: 50% 40%;
-  width: 100%;
-  max-width: unset;
-  overflow: hidden;
-}
-
-.hero-container::after {
-  width: 100%;
-  height: 20%;
-  content: '';
-  background-image: url('images/Repeating Wave 1.svg');
-  background-position: 50% 50%;
-  background-size: 500%;
-  background-repeat: no-repeat;
+.hero-wave {
+  height: 40%;
+  object-fit: none;
+  object-position: 50% 50%;
   position: absolute;
-  bottom: 0;
+  bottom: -90px;
+  z-index: 1;
 }
 
 .hero {
   background-color: var(--clr-seafoam-secondary);
   position: relative;
+  padding-bottom: 0;
+  margin-bottom: 80px;
 }
 
 .hero h1 {
@@ -82,15 +77,37 @@ main section {
 
 /* hero desktop */
 @media screen and (min-width:800px) {
+  .hero-container {
+    margin-bottom: 160px;
+  }
+
   .hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5%;
+    position: relative;
+  }
+
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .hero h2 {
+    font-size: 24px;
+    line-height: 32px;
   }
 
   .hero h3 {
     font-size: 24px;
     line-height: 32px;
+  }
+
+  .hero p {
+    font-weight: 500;
+    z-index: 1;
+    position: relative;
   }
 
   .hero-button {
@@ -145,6 +162,19 @@ main section {
 
 .pricing {
   margin-bottom: 60px;
+  position: relative;
+}
+
+.pricing::before {
+  content: '';
+  width: 100%;
+  height: 85%;
+  background-image: url('images/Wave2.svg');
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -550px;
+  right: 0;
+  z-index: 1;
 }
 
 .feature-wrapper {
@@ -155,7 +185,14 @@ main section {
 .features,
 .monthly,
 .annual {
+  background-color: white;
   border-radius: 16px;
+  z-index: 2;
+}
+
+.feature-wrapper .container {
+  position: relative;
+  z-index: 2;
 }
 
 :is(.features, .annual, .monthly) h4 {
@@ -283,18 +320,55 @@ div:has(> .expect) {
 }
 
 @media screen and (min-width:800px) {
+
+  .pricing::before {
+    background-size: cover;
+    width: calc(100% + max(96px,6.5%));
+    height: 90%;
+    top: 15%;
+    left: min(-96px,-6.5%);
+  }
+
+  .pricing .description {
+    max-width: 45%;
+    font-size: 24px;
+    line-height: 32px;
+    position: relative;
+    z-index: 2;
+  }
+
   .feature-wrapper {
     grid-template-columns: repeat(3,1fr);
-    grid-template-rows: 300px 300px;
+    grid-template-rows: 250px 500px;
     column-gap: 24px;
+    z-index: 2;
+    position: relative;
   }
 
   .features {
     grid-row: 1 / span 2;
   }
 
+  :is(.features, .annual, .monthly) {
+    background-color: white;
+  }
+
   .feature-wrapper .container {
     grid-column: 2 / span 1;
+  }
+
+  .feature-item h5 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .feature-item .content {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .cancellation {
+    justify-content: left;
   }
 }
 
@@ -302,6 +376,11 @@ div:has(> .expect) {
 
 .impact {
   padding-bottom: 60px;
+}
+
+.impact * {
+  position: relative;
+  z-index: 2;
 }
 
 .impact h2 {
@@ -403,7 +482,10 @@ div:has(> .expect) {
 
 .case {
   margin-bottom: 60px;
+  position: relative;
 }
+
+
 
 .case .image-container img {
   margin-inline: auto;
@@ -477,6 +559,24 @@ div:has(> .expect) {
 }
 
 @media screen and (min-width:800px) {
+  .case::after {
+    content: '';
+    width: calc(100% + max(96px,6.5%));
+    height: 60%;
+    background-image: url('images/Wave2.svg');
+    background-repeat: no-repeat;
+    background-size: 150%;
+    background-position-x: 20%;
+    position: absolute;
+    top: 15%;
+    left: min(-96px,-6.5%);
+  }
+
+  .case-item-container {
+    position: relative;
+    z-index: 2;
+  }
+
   .case-item {
     margin-bottom: 100px;
     position: static;
@@ -505,6 +605,36 @@ div:has(> .expect) {
 
 .review {
   margin-bottom: 60px;
+  position: relative;
+  background-color: var(--clr-cream);
+}
+
+.wave-wrapper {
+  position: absolute;
+  width: calc(100% + 5px);
+  height: 100%;
+  top: -100px;
+  left: -5px;
+  /* right: 0; */
+  overflow: hidden;
+}
+
+.review-wave {
+  position: relative;
+  width: 1000px;
+  max-width: unset;
+  height: 500px;
+
+}
+
+.review :is(h3, h2) {
+  z-index: 2;
+  position: relative;
+}
+
+.review .carousel-control {
+  position: relative;
+  z-index: 2;
 }
 
 .review-item {
@@ -582,10 +712,118 @@ div:has(> .expect) {
   display: block;
 }
 
+@media screen and (min-width:800px) {
+  .review {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 200px;
+    margin-bottom: 0;
+    background-color: var(--clr-seafoam-secondary);
+  }
+
+  .review::before {
+    width: calc(100% + max(96px,6.5%));
+    height: 30%;
+    content: '';
+    background-image: url('images/Repeating Wave 1.svg');
+    background-position: 50% 50%;
+    background-size: unset;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -60px;
+    left: min(-96px,-6.5%);
+    transform: rotate(180deg);
+  }
+
+  .review :is(h3, h2, .carousel_track-container) {
+    position: relative;
+    z-index: 2;
+  }
+
+  .review h3 {
+    order: 1;
+  }
+
+  .review h2 {
+    order: 2;
+    margin-bottom: 35px;
+  }
+
+  .carousel-control {
+    order: 4;
+    margin-bottom: 16px;
+    position: relative;
+  }
+
+  .review .indicator-container {
+    position: absolute;
+    inset: 35%;
+  }
+
+  .review .carousel_indicator {
+    width: 106px;
+    height: 23px;
+  }
+
+  .carousel_track-container {
+    order: 3;
+    margin-bottom: 32px;
+  }
+
+  .google {
+    order: 5;
+  }
+
+  .review-item-container {
+    width: 850px;
+    height: 550px;
+    margin-inline: auto;
+  }
+
+  .stars {
+    width: 40px;
+    height: 40px;
+  }
+
+  .rating {
+    margin-bottom: 32px;
+  }
+
+  .rate {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .review-item {
+    height: 100%;
+    padding: 62px;
+  }
+
+  .review-item-txt::before {
+    width: 16px;
+  }
+
+  .review-item-txt p{
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
 /* difference */
 
 .difference {
   padding-bottom: 60px;
+  position: relative;
+}
+
+.diff-wave {
+  width: calc(2 * max(96px,6.5%) + 100%);
+  right: 0;
+}
+
+.difference :is(h3,h2, .diff-item-container) {
+  position: relative;
+  z-index: 2;
 }
 
 .diff-item {
@@ -599,6 +837,7 @@ div:has(> .expect) {
   grid-template-columns: repeat(3,1fr);
   gap: 4px;
   text-align: center;
+  position: relative;
 }
 
 .subject h4 {
@@ -609,19 +848,16 @@ div:has(> .expect) {
   position: relative;
 }
 
-.subject h4::after {
+.underblob {
   content: '';
-  width: 90%;
+  width: 30%;
   height: 6px;
   position: absolute;
-  bottom: -21px;
+  bottom: 0;
   left: 5%;
   background-color: rgba(122, 152, 116, 1);
   border-radius: 100vw 100vw 0 0 ;
-}
-
-.subject h4:active::after {
-  background-color: red;
+  transition: all 0.1s ease-in;
 }
 
 .underlinebar {
@@ -635,6 +871,11 @@ div:has(> .expect) {
 .conventional,
 .others {
   padding: 9px 16px 27px 16px;
+}
+
+.conventional,
+.others {
+  display: none;
 }
 
 .expert-care {
@@ -724,6 +965,17 @@ div:has(> .expect) {
 }
 
 @media screen and (min-width:800px) {
+
+  .difference {
+    padding-top: 0;
+    position: relative;
+  }
+
+  .diff-wave {
+    position: absolute;
+    top: -180px;
+  }
+
   .difference h2 {
     margin-bottom: 32px;
   }
@@ -742,6 +994,7 @@ div:has(> .expect) {
   }
 
   :is(.root, .conventional, .others) {
+    display: block;
     border-radius: 32px;
     background-color: white;
     padding: 0 0 27px 0;

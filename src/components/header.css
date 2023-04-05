@@ -106,18 +106,49 @@ header {
 }
 
 @media screen and (min-width:800px) {
+  .navigation {
+    padding-inline: 96px;
+  }
+
+  .navbar-right {
+    width: calc(95% - 100px);
+    gap: 40px;
+  }
+
+  .search-desktop {
+    min-width: 320px;
+    height: 40px;
+    padding: 0px 24px 0px 24px;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--clr-seafoam-secondary);
+  }
+
+  .search-desktop input {
+    min-width: 200px;
+    border: 0;
+    background-color: inherit;
+    font-family: 'Lato',sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+  }
+
   .search {
     order: 1;
   }
 
   .cart {
     order: 3;
+    min-width: 22px;
   }
 
   .nav-menu {
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 28px;
     position: relative;
     inset: 0;
     opacity: 1;
@@ -128,9 +159,38 @@ header {
 
   .nav-menu li {
     margin-top: 0;
+    min-width: 100px;
+  }
+
+  .nav-menu li a {
+    font-weight: 700;
+    position: relative;
+    margin-right: 24px;
+  }
+
+  .nav-menu li a::after {
+    content: '';
+    width: 16px;
+    height: 16px;
+    background-image: url(icons/chevron-down.svg);
+    position: absolute;
+    top: 8px;
+    right: -24px;
+  }
+
+  .nav-menu li a .new {
+    margin-left: 6px;
+    padding: 4px 6px;
+    background-color: rgba(246, 111, 111, 1);
+    border-radius: 3px;
+    color: white;
+    font-size: 10px;
+    line-height: 13px;
+    font-weight: 700;
   }
 
   .login {
+    width: 118px;
     display: block;
     order: 4;
   }

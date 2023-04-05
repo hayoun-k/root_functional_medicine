@@ -49,6 +49,7 @@ li {
 }
 
 @media screen and (min-width:800px) {
+  .mobile-only,
   div.mobile-only {
     display: none;
   }

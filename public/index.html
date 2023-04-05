@@ -16,13 +16,17 @@
         <img src="./src/images/logo.svg" alt="Root logo" id="logo">
       </div>
       <div class="navbar-right">
-        <a href="#" class="search"><img src="./src/icons/search.svg" alt="" class="header-icon"></a>
+        <div class="search-desktop desktop-only">
+          <img src="./src/icons/search.svg" alt="" class="header-icon ">
+          <input type="text" placeholder="Search">
+        </div>
+        <a href="#" class="search"><img src="./src/icons/search.svg" alt="" class="header-icon mobile-only"></a>
         <a href="#" class="cart"><img src="./src/icons/cart.svg" alt="" class="header-icon"></a>
         <ul class="nav-menu">
-          <li><a href="">store</a></li>
-          <li><a href="">membership</a></li>
-          <li><a href="">articles</a></li>
-          <li><a href="">about us</a></li>
+          <li><a href="">Store</a></li>
+          <li><a href="">Membership<span class="desktop-only new">New</span></a></li>
+          <li><a href="">Articles</a></li>
+          <li><a href="">About Us</a></li>
         </ul>
         <div class="menu-button hamburger mobile-only">
           <span class="bar"></span>
@@ -38,6 +42,7 @@
   </header>
   <main>
     <div class="hero-container">
+      <img src="./src/images/Repeating Wave 1.svg" alt="" class="hero-wave">
       <section class="hero">
         <div class="hero-left">
           <div class="hero-txt">
@@ -224,7 +229,7 @@
           <button class="carousel_indicator"></button>
         </div>
       </div>
-      <div class="carousel_track-container">
+      <div class="carousel_track-container case-item-container">
         <div class="slider-container carousel_track">
           <div class="case-item card-content current_slide">
             <div class="image-container">
@@ -287,6 +292,7 @@
       </div>
     </section>
     <section class="review">
+      <div class="wave-wrapper"><img src="./src/images/Wave3.svg" alt="" class="mobile-only review-wave absolute"></div>
       <h3 class="subheading">What The Community is Saying</h3>
       <h2>Member Reviews</h2>
       <div class="carousel-control">
@@ -359,15 +365,18 @@
       <a href="#" class="google">Read More On Google</a>
     </section>
     <section class="difference">
+      <img src="./src/images/Wave3.svg" alt="" class="diff-wave desktop-only">
       <h3 class="subheading">The Root Difference</h3>
       <h2>Compare With Root</h2>
-      <div class="diff-item-cotainer">
+      <div class="diff-item-container">
         <div class="diff-item">
           <div class="subject mobile-only">
-            <h4>Root</h4>
-            <h4>Conventional</h4>
-            <h4>Others</h4>
+            <h4 class="subject-heading">Root</h4>
+            <h4 class="subject-heading">Conventional</h4>
+            <h4 class="subject-heading">Others</h4>
+            <div class="underblob"></div>
           </div>
+          
           <div class="underlinebar">
           </div>
           <div class="root">
@@ -431,6 +440,7 @@
       </div>
       <a href="#" class="btn btn-primary-green" id="applybutton">Become a member</a>
       <script src="./src/js/button.js"></script>
+      <script src="./src/js/tab.js"></script>
     </section>
     <section class="availability">
       <div class="image-container desktop-only">
