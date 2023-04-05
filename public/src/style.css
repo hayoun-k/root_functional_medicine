@@ -1486,8 +1486,13 @@ div:has(> .expect) {
     margin-bottom: 32px;
   }
 
+  .diff-item-container {
+    margin-inline: auto;
+  }
+
   .diff-item{
     display: flex;
+    justify-content: center;
     flex-wrap: nowrap;
     gap: 24px;
     border-radius: unset;
@@ -1504,6 +1509,10 @@ div:has(> .expect) {
     border-radius: 32px;
     background-color: white;
     padding: 0 0 27px 0;
+  }
+
+  .root {
+    position: relative;
   }
 
   :is(.root, .conventional, .others) h4 {
@@ -1524,8 +1533,21 @@ div:has(> .expect) {
     margin-inline: 16px;
   }
 
+  .compare-list {
+    position: relative;
+  }
+
   .compare-item p {
     margin-block: 24px;
+  }
+
+  #applybutton {
+    width: 100%;
+    position: absolute;
+    /* left: 0; */
+    bottom: -64px;
+    /* margin-top: 32px; */
+    margin-inline: 0;
   }
 }
 
