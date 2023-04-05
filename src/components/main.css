@@ -152,9 +152,14 @@ main section {
 }
 
 @media screen and (min-width:800px) {
+.treatment {
+  padding-block: 140px;
+}
+
   .treatment-list {
     grid-template-columns: repeat(3,1fr);
     row-gap: min(32px, 10%);
+    min-height: 240px;
   }
 }
 
@@ -485,10 +490,41 @@ div:has(> .expect) {
   position: relative;
 }
 
-
-
-.case .image-container img {
+.case-item .image-container :is(.brynn,.gabriella,.ashna) {
+  width: 288px;
+  height: 299px;
   margin-inline: auto;
+  position: relative;
+  z-index: 1;
+}
+
+:is(.brynn,.gabriella,.ashna)::before {
+  content: '';
+  width: 100%;
+  height: 288px;
+  border-radius: 16px;
+  background-size: 75%;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}
+
+.brynn::before {
+  background-color: var(--clr-veige);
+}
+
+.gabriella::before {
+  background-color: var(--clr-lightgreen);
+}
+
+.ashna::before {
+  background-color: var(--clr-mugwort);
+}
+
+.case-item .image-container :is(.brynn,.gabriella,.ashna) img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .caption {
@@ -591,8 +627,25 @@ div:has(> .expect) {
     padding-left: 110px;
   }
 
-  .case-item .image-container img {
-    min-width: 500px;
+  .case-item .image-container :is(.brynn,.gabriella,.ashna) {
+    width: 512px;
+    height: unset;
+  }
+
+  .case-item .image-container :is(.brynn,.gabriella,.ashna)::before {
+    height: 80%;
+    border-radius: 32px;
+  }
+
+  .case-item .text {
+    margin-top: 9%;
+    margin-left: 72px;
+  }
+
+  .outcome {
+    font-size: 18px;
+    line-height: 28px;
+    font-family: 'Poppins',sans-serif;
   }
 
   .caption {
@@ -964,10 +1017,20 @@ div:has(> .expect) {
   margin-top: 24px;
 }
 
+#applybutton {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -64px;
+  /* margin-top: 32px; */
+  margin-inline: 0;
+}
+
 @media screen and (min-width:800px) {
 
   .difference {
     padding-top: 0;
+    padding-bottom: 160px;
     position: relative;
   }
 
@@ -1035,14 +1098,7 @@ div:has(> .expect) {
     margin-block: 24px;
   }
 
-  #applybutton {
-    width: 100%;
-    position: absolute;
-    /* left: 0; */
-    bottom: -64px;
-    /* margin-top: 32px; */
-    margin-inline: 0;
-  }
+
 }
 
 /* availability */
