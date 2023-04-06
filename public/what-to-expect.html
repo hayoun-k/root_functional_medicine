@@ -4,9 +4,126 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./src/style.css">
+  <script defer src="./src/js/menu.js"></script>
   <title>Document</title>
 </head>
 <body>
-  
+  <header>
+    <nav class="navigation">
+      <div class="logo navbar-left">
+        <img src="./src/images/logo.svg" alt="Root logo" id="logo">
+      </div>
+      <div class="navbar-right">
+        <div class="search-desktop desktop-only">
+          <img src="./src/icons/search.svg" alt="" class="header-icon ">
+          <input type="text" placeholder="Search">
+        </div>
+        <a href="#" class="search"><img src="./src/icons/search.svg" alt="" class="header-icon mobile-only"></a>
+        <a href="#" class="cart"><img src="./src/icons/cart.svg" alt="" class="header-icon"></a>
+        <ul class="nav-menu">
+          <li><a href="">Store</a></li>
+          <li><a href="">Membership<span class="desktop-only new">New</span></a></li>
+          <li><a href="">Articles</a></li>
+          <li><a href="">About Us</a></li>
+        </ul>
+        <div class="menu-button hamburger mobile-only">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <div class="login">
+          <button class="btn btn-primary-green">Login</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="expect-main">
+    <div class="expect-wrapper">
+      <img src="./src/images/expect-wave.svg" al t="" class="expect-wave absolute mobile-only">
+      <img src="./src/images/Wave2.svg" alt="" class="expect-wave-desktop desktop-only">
+      <div class="back-button-container">
+        <a href="./index.html" class="back"><img src="./src/icons/arrow_back.svg" alt="" class="arrow-left">Back</a>
+      </div>
+      <section>
+        <div class="expect-text">
+          <h2>Our Virtual Membership Program</h2>
+          <h1>What to Expect</h1>
+        </div>
+        <div class="expect-item-container">
+          <div class="expect-item">
+            <div class="item-header">
+              <img src="./src/images/Circle Illustration.svg" alt="">
+              <h3>Decide To Change Your Life</h3>
+            </div>
+            <div class="item-description">
+              <p>Sign up for the Root Membership</p>
+            </div>
+          </div>
+          <div class="expect-item">
+            <div class="item-header">
+              <img src="./src/images/Circle Illustration-1.svg" alt="">
+              <h3>Set Up Your Account</h3>
+            </div>
+            <div class="item-description">
+              <p>Share your story via Root's comprehensive intake process</p>
+            </div>
+          </div>
+          <div class="expect-item">
+            <div class="item-header">
+              <img src="./src/images/Circle Illustration-2.svg" alt="">
+              <h3>First Session with Doctor & Dietitian</h3>
+            </div>
+            <div class="item-description">
+              <ul>
+                <li>Up to 1 hour doctor session</li>
+                <li>Up to 1 hour dietitian session</li>
+                <li>Develop custom wellness plan</li>
+              </ul>
+            </div>
+          </div>
+          <div class="expect-item">
+            <div class="item-header">
+              <img src="./src/images/Circle Illustration-3.svg" alt="">
+              <h3>Testing</h3>
+            </div>
+            <div class="item-description">
+              <p>Complete Root's Wellness Lab Panel and any additional functional testing</p>
+            </div>
+          </div>
+          <div class="expect-item">
+            <div class="item-header">
+              <img src="./src/images/Circle Illustration-4.svg" alt="">
+              <h3>Second Session with Doctor & Dietitian</h3>
+            </div>
+            <div class="item-description">
+              <ul>
+                <li>Up to 1 hour doctor session</li>
+                <li>Up to 1 hour dietitian session</li>
+                <li>Review functional testing results</li>
+                <li>Update wellness plan</li>
+              </ul>
+            </div>
+          </div>
+          <div class="expect-item">
+            <div class="item-header">
+              <img src="./src/images/Circle Illustration-5.svg" alt="">
+              <h3>Ongoing Support</h3>
+            </div>
+            <div class="item-description">
+              <ul>
+                <li>Unlimited sessions with your Root doctor</li>
+                <li>Unlimited  sessions with your Root dietitian</li>
+                <li>Reorder testing to assess progress</li>
+                <li>Additional testing to dig deeper</li>
+                <li>Access to Root Community and meal plans</li>
+                <li>Receive 20% off Root supplements</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
 </body>
 </html>
